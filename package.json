@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx esbuild src/index.jsx --bundle --minify --outfile=./www/index.js",
+    "build": "npx esbuild src/index.jsx --bundle --minify --format=esm --outfile=./www/index.js",
     "server":"npx servor ./www index.html 8080 --reload --browse",
     "tailwind":"npx tailwindcss -i ./src/styles.css -o ./www/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
