@@ -4,21 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx esbuild src/index.jsx --bundle --minify --format=esm --outfile=./www/index.js",
-    "server":"npx servor ./www index.html 8080 --reload --browse",
-    "tailwind":"npx tailwindcss -i ./src/styles.css -o ./www/styles.css --watch",
+    "build": "npx esbuild src/index.jsx --bundle --minify --format=esm --outfile=./www/index.js --watch",
+    "build-css": "npx esbuild ./src/WebComponents/Layout/style.css --bundle --minify --outfile=./www/global.css --watch",
+    "server": "npx servor ./www index.html 8080 --reload --browse",
+    "tailwind": "npx tailwindcss -i ./src/styles.css -o ./www/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
+    "components-font-awesome": "^4.7.0",
     "esbuild": "^0.14.34",
     "postcss": "^8.4.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "servor": "^4.0.2",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "jquery": "^1.12.1",
+    "hammerjs": "^2.0.8"
   }
 }
