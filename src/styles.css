@@ -30,8 +30,10 @@
 }
 .lyt01 aside {
    
-   width: 200px;
-   min-width: 200px;
+   /*width: 200px;*/
+   /*min-width: 200px;*/
+
+   @apply w-52 min-h-fit
 }
 .lyt01 section {
     flex:70% ;
@@ -182,23 +184,23 @@
   }
   
   .menu-vertical01 {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    list-style: none;
-    height: 100%;
+    /*position: relative;*/
+    /*display: block; */
+    /*overflow: hidden;*/
+    /*list-style: none;*/
+    /*height: 100%;*/
     touch-action: none;
     /*margin-left: -230px;*/
     /*width:calc(200px + 17px);*/
-    width: 200px;
+    /*width: 200px;  es parecido a w-52*/
     /*margin-left: -230px;*/
     transition: all 0.1s linear;
     -webkit-transition: all 0.1s linear;
     height: calc(100vh - 3em - 3em);
-    /*
-     height:calc(100vh - 51px - 51px);
-     min-height:calc(100vh - 51px - 51px);
-     */
+
+    @apply relative block overflow-hidden list-none w-52
+
+
   }
   @media screen and (min-width: 640px) {
     .menu-vertical01 {
@@ -215,37 +217,34 @@
     right: 0;
   }
   .menu-vertical01 .slide-button {
-    display: block;
-    position: absolute;
+    /*display: block;*/
+    /*position: absolute;*/
     background: transparent;
     cursor: pointer;
-    border: 0px;
-    margin: 0px;
+    /*border: 0px;*/
+    /*margin: 0px;*/
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    text-align: center;
+    /*text-align: center;*/
     opacity: 0.8;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: #E8EAF6;
+    /*color: #E8EAF6;*/
     z-index: 12;
-    /*
-    top:50%;
-    transform:translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    z-index:20;
-    */
+  
     background: -moz-radial-gradient(center, ellipse cover, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
-    /* FF3.6-15 */
+  
     background: -webkit-radial-gradient(center, ellipse cover, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
-    /* Chrome10-25,Safari5.1-6 */
+   
     background: radial-gradient(ellipse at center, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f7606c88", endColorstr="#3f4c6b",GradientType=1 );
-    /* IE6-9 fallback on horizontal gradient */
+    
+    @apply block absolute border-0 m-0 text-center text-blue-50
+
   }
   .menu-vertical01 .slide-button.no-visible {
     visibility: hidden;
@@ -258,25 +257,25 @@
     color: #E8EAF6;
     opacity: 1;
     background: -moz-radial-gradient(center, ellipse cover, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
-    /* FF3.6-15 */
+   
     background: -webkit-radial-gradient(center, ellipse cover, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
-    /* Chrome10-25,Safari5.1-6 */
+   
     background: radial-gradient(ellipse at center, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f7606c88", endColorstr="#3f4c6b",GradientType=1 );
-    /* IE6-9 fallback on horizontal gradient */
+   
   }
   .menu-vertical01 .container-menu-scroll {
-    position: relative;
-    width: 200px;
-    height: 100%;
-    /*
-     height:calc(100vh - 51px - 51px);
-    min-height:calc(100vh - 51px - 51px);
-     */
-    overflow: hidden;
-    overflow-y: auto;
-    width: calc(200px + 17px);
+    /*position: relative;*/
+    /*width: 200px;*/
+    /*height: 100%;*/
+   
+    /*overflow: hidden;*
+    /*overflow-y: auto;*/
+    width: calc(208px + 17px);
+    
+    @apply relative h-full overflow-hidden overflow-y-auto
+
   }
   .menu-vertical01 .container-menu-scroll .items {
     /*
@@ -285,12 +284,13 @@
        la altura visible o vieport
        En este caso prohibido poner height:100%; aqui en items;
     */
-    position: absolute;
-    list-style: none;
-    width: 200px;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+    /*position: absolute;*/
+    /*list-style: none;*/
+    /*width: 200px;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*overflow: hidden;*/
+    @apply absolute w-52 list-none overflow-hidden top-0 left-0
     /*touch-action: none;*/
   }
   .menu-vertical01 .container-menu-scroll .items .element {
@@ -298,7 +298,7 @@
     position: static;
   }
   .menu-vertical01 .container-menu-scroll .items .element.item .element-link:hover {
-   
+    @apply bg-gradient-to-b from-blue-600 to-blue-900
     /*
     background: #3D5AFE;
    
@@ -338,7 +338,7 @@
     font-family: Helvetica, Arial, sans-serif;
     /*font-weight: bold;*/
     text-shadow: 1px 1px 0px darkslategrey;
-    @apply block relative bg-blue-700 text-blue-100 p-2 font-bold w-full border-t no-underline 
+    @apply block relative bg-blue-800 text-blue-100 p-2 font-bold w-full border-t no-underline 
 
     /*
     background: #3F51B5;
@@ -353,17 +353,20 @@
     */
   }
   .menu-vertical01 .container-menu-scroll .items .element-link + .sub-menu {
-    overflow: hidden;
+    /*overflow: hidden;*/
     /*importante para funcionar el submenu */
-    position: relative;
-    display: block;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    height: 0;
-    border: 0;
+    /*position: relative;*/
+    /*display: block;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*opacity: 0;*/
+    /*height: 0;*/
+    /*border: 0;*/
     transition: all 0.3s ease-in-out;
-    z-index: 0;
+    /*z-index: 0;*/
+
+    @apply relative block overflow-hidden p-0 m-0 opacity-0 h-0 border-0 z-0
+
   }
   .menu-vertical01 .container-menu-scroll .items .element-link.expand .fa {
     transform: rotate(90deg);
@@ -374,9 +377,14 @@
     height: 100%;
     color: #E8EAF6;
     opacity: 1;
+    
+    
+    
   }
   .menu-vertical01 .container-menu-scroll .items .element-link.current-element {
    
+    @apply bg-blue-500
+    /*
     background: #3D5AFE;
   
     background: -moz-linear-gradient(top, #3D5AFE 0%, #304FFE 100%);
@@ -386,21 +394,25 @@
     background: linear-gradient(to bottom, #3D5AFE 0%, #304FFE 100%);
   
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3D5AFE", endColorstr="#304FFE",GradientType=0 );
-  
+    */
   }
   .menu-vertical01 .container-menu-scroll .items .element-link.current-element:before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
     content: "";
-    width: 100%;
+    /*width: 100%;*/
     height: 52px;
-    border-left: 7px solid yellow;
-    padding: 0;
+    /*border-left: 7px solid yellow;*/
+    /*padding: 0;*/
+
+    @apply block absolute top-0 left-0 w-full p-0 border-l-8 border-yellow-400
   }
   .menu-vertical01 .container-menu-scroll .items .element-link.current-menu {
    
+    @apply bg-gradient-to-b from-blue-700 to-blue-900
+    /*
     background: #3F51B5;
   
     background: -moz-linear-gradient(top, #303F9F 0%, #1A237E 100%);
@@ -410,12 +422,12 @@
     background: linear-gradient(to bottom, #303F9F 0%, #1A237E 100%);
     
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#303F9F", endColorstr="#1A237E",GradientType=0 );
-  
+    */
   }
   .menu-vertical01 .container-menu-scroll .items .sub-menu .element-link {
     text-indent: 25px;
-
-    
+    @apply bg-blue-600
+    /*
     background: #7986CB;
     
     background: -moz-linear-gradient(top, #7986CB 0%, #5C6BC0 44%, #5C6BC0 100%);
@@ -425,10 +437,12 @@
     background: linear-gradient(to bottom, #7986CB 0%, #5C6BC0 44%, #5C6BC0 100%);
   
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#7986CB", endColorstr="#5C6BC0",GradientType=0 );
-    
+    */
   }
   .menu-vertical01 .container-menu-scroll .items .sub-menu .element-link.current-element {
-  
+
+    @apply bg-blue-500
+    /*
     background: #3D5AFE;
    
     background: -moz-linear-gradient(top, #3D5AFE 0%, #304FFE 100%);
@@ -438,10 +452,12 @@
     background: linear-gradient(to bottom, #3D5AFE 0%, #304FFE 100%);
    
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3D5AFE", endColorstr="#304FFE",GradientType=0 );
- 
+     */
   }
   .menu-vertical01 .container-menu-scroll .items .sub-menu .element-link:hover {
   
+    @apply bg-gradient-to-b from-blue-500 to-blue-700
+    /*
     background: #3D5AFE;
   
     background: -moz-linear-gradient(top, #3D5AFE 0%, #304FFE 100%);
@@ -451,7 +467,7 @@
     background: linear-gradient(to bottom, #3D5AFE 0%, #304FFE 100%);
   
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3D5AFE", endColorstr="#304FFE",GradientType=0 );
-   
+   */
   }
   
   .section-open .menu-vertical01 {
@@ -548,6 +564,9 @@
       box-shadow: none;
       opacity: 1;
       border-top: 1px solid #7986CB;
+
+      
+
     }
   }
   @media screen and (min-width: 640px) {
@@ -565,13 +584,16 @@
   .menu-horizontal .element .element-link,
   .menu-horizontal .element .back-element,
   .menu-horizontal .element .sub-element {
-    display: block;
+    /*display: block;*/
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-shadow: 1px 1px 0px black;
-    text-decoration: none;
-    color: #E8EAF6;
-   
+    /*text-decoration: none;*/
+    /*color: #E8EAF6;*/
+    
+
+    @apply block bg-blue-700 text-blue-100 no-underline ;
+    /*
     background: #303F9F;
    
     background: -moz-linear-gradient(top, #303F9F 0%, #283593 24%, #1A237E 88%);
@@ -581,14 +603,22 @@
     background: linear-gradient(to bottom, #303F9F 0%, #283593 24%, #1A237E 88%);
    
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#303F9F", endColorstr="#1A237E",GradientType=0 );
-    
+    */
+
+
     padding: 10px;
   }
   @media screen and (min-width: 640px) {
-    .menu-horizontal .element .element-link,
+
+
+
+  .menu-horizontal .element .element-link,
   .menu-horizontal .element .back-element,
   .menu-horizontal .element .sub-element {
-    
+  
+      @apply bg-blue-700 border-blue-100  no-underline ;
+      /*@apply bg-gradient-to-b from-blue-700 to-blue-900;*/
+      /*
       background: #3F51B5;
      
       background: -moz-linear-gradient(top, #1A237E 0%, #3F51B5 100%);
@@ -598,19 +628,20 @@
       background: linear-gradient(to bottom, #1A237E 0%, #3F51B5 100%);
      
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1A237E", endColorstr="#3F51B5",GradientType=0 );
-    
+      */
     }
   }
   @media screen and (min-width: 640px) {
     .menu-horizontal .element {
-      color: #EDE7F6;
-      position: relative;
-      /*width:25%;*/
+      /*color: #EDE7F6;*/
+      /*position: relative;*/
       height: 47px;
-      top: 0;
-      left: 0;
-      float: left;
-      opacity: 1;
+      /*top: 0;*/
+      /*left: 0;*/
+      /*float: left;*/
+      /*opacity: 1;*/
+
+      @apply text-blue-100 relative top-0 left-0 float-left opacity-100
     }
   }
   @media screen and (min-width: 640px) {
@@ -621,6 +652,7 @@
   @media screen and (min-width: 640px) {
     .menu-horizontal .element:hover .element-link {
       border-top: 5px solid yellow;
+      @apply bg-gradient-to-b from-blue-600 to-blue-900;
     }
   }
   @media screen and (min-width: 640px) {
@@ -696,17 +728,20 @@
     -webkit-box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.75);
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#512da8+0,4527a0+24,311b92+88 */
+
+    @apply bg-blue-700  no-underline ;
+    /*
+   
     background: #303F9F;
-    /* Old browsers */
+ 
     background: -moz-linear-gradient(top, #303F9F 0%, #283593 24%, #1A237E 88%);
-    /* FF3.6-15 */
+   
     background: -webkit-linear-gradient(top, #303F9F 0%, #283593 24%, #1A237E 88%);
-    /* Chrome10-25,Safari5.1-6 */
+   
     background: linear-gradient(to bottom, #303F9F 0%, #283593 24%, #1A237E 88%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#303F9F", endColorstr="#1A237E",GradientType=0 );
-    /* IE6-9 */
+    */
     opacity: 0;
     transition: all 0.3s ease-in-out;
     z-index: 30;
@@ -724,33 +759,37 @@
   }
   @media screen and (min-width: 640px) {
     .menu-horizontal .sub-menu .element-link {
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#673ab7+0,9575cd+100 */
+     
+      @apply bg-blue-700  no-underline ;
+      /*
       background: #3F51B5;
-      /* Old browsers */
+     
       background: -moz-linear-gradient(top, #3F51B5 0%, #1A237E 100%);
-      /* FF3.6-15 */
+     
       background: -webkit-linear-gradient(top, #3F51B5 0%, #1A237E 100%);
-      /* Chrome10-25,Safari5.1-6 */
+    
       background: linear-gradient(to bottom, #3F51B5 0%, #1A237E 100%);
-      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3F51B5", endColorstr="#1A237E",GradientType=0 );
-      /* IE6-9 */
+      */
       border-right: none;
     }
   }
   @media screen and (min-width: 640px) {
     .menu-horizontal .sub-menu .element-link:hover {
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#651fff+0,6200ea+100 */
+      @apply bg-gradient-to-b from-blue-500 to-blue-700
+      /*
       background: #3D5AFE;
-      /* Old browsers */
+    
       background: -moz-linear-gradient(top, #3D5AFE 0%, #304FFE 100%);
-      /* FF3.6-15 */
+    
       background: -webkit-linear-gradient(top, #3D5AFE 0%, #304FFE 100%);
-      /* Chrome10-25,Safari5.1-6 */
+    
       background: linear-gradient(to bottom, #3D5AFE 0%, #304FFE 100%);
-      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3D5AFE", endColorstr="#304FFE",GradientType=0 );
-      /* IE6-9 */
+      */
+
     }
   }
   .menu-horizontal .sub-menu a:last-child {
