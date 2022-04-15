@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.container {
+display: block;
+position: relative;
+max-width: 960px;
+/*importante para que se centre */
+width: 100%;
+min-height: 100vh;
+margin: 0 auto;
+overflow: hidden;
+overflow-y: auto;
+}
 
 .lyt01 {
     box-sizing: border-box;
@@ -78,7 +89,6 @@
    
    .lyt01 nav  {
     
-   
     width: 100%;
     
    }
@@ -89,18 +99,18 @@
    
 }
 .lyt01 .nav-mobile {
-    display: block;
+    /*display: block;*/
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-shadow: 1px 1px 0px black;
-    position: relative;
+    /*position: relative;*/
     background: transparent;
     cursor: pointer;
-    border: 0px;
-    margin: 0px;
-    margin-top: 0px;
-    top: 0px;
-    text-align: center;
+    /*border: 0px;*/
+    /*margin: 0px;*/
+    /*margin-top: 0px;*/
+    /*top: 0px;*/
+    /*text-align: center;*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -109,6 +119,9 @@
     /* pointer-events: none;*/
     width: 50px;
     height: 45px;
+
+    @apply block font-bold relative border-0 m-0 top-0 text-center
+
   }
   @media screen and (max-width: 640px){
       #btn-toggle-left,#btn-toggle-right,#btn-toggle-sign-in{
@@ -198,7 +211,7 @@
     -webkit-transition: all 0.1s linear;
     height: calc(100vh - 3em - 3em);
 
-    @apply relative block overflow-hidden list-none w-52
+    @apply relative block overflow-hidden list-none w-52 bg-blue-700
 
 
   }
@@ -254,8 +267,8 @@
     cursor: not-allowed;
   }
   .menu-vertical01 .slide-button:hover {
-    color: #E8EAF6;
-    opacity: 1;
+    /*color: #E8EAF6;*/
+    /*opacity: 1;*/
     background: -moz-radial-gradient(center, ellipse cover, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
    
     background: -webkit-radial-gradient(center, ellipse cover, rgba(96, 108, 136, 0.97) 0%, rgba(96, 108, 136, 0.97) 1%, #3f4c6b 100%);
@@ -264,6 +277,8 @@
     
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f7606c88", endColorstr="#3f4c6b",GradientType=1 );
    
+    @apply text-blue-100 opacity-100
+
   }
   .menu-vertical01 .container-menu-scroll {
     /*position: relative;*/
@@ -373,12 +388,12 @@
     -webkit-transform: rotate(90deg);
   }
   .menu-vertical01 .container-menu-scroll .items .element-link.expand + .sub-menu {
-    display: block;
-    height: 100%;
-    color: #E8EAF6;
-    opacity: 1;
+    /*display: block;*/
+    /*height: 100%;*/
+    /*color: #E8EAF6;*/
+    /*opacity: 1;*/
     
-    
+    @apply block h-full text-blue-100 opacity-100
     
   }
   .menu-vertical01 .container-menu-scroll .items .element-link.current-element {
@@ -482,24 +497,27 @@
    /*************************************************************************/
   /*************************************************************************/
   .ripple {
-    position: relative;
-    overflow: hidden;
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    @apply relative overflow-hidden
   }
   
   .ripple:after {
     content: "";
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    /*display: block;*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
     width: 120px;
     height: 120px;
     margin-left: -60px;
     margin-top: -60px;
-    background: #E8EAF6;
+    /*background: #E8EAF6;*/
     border-radius: 100%;
-    opacity: 0.6;
+    /*opacity: 0.6;*/
     transform: scale(0);
+
+    @apply block absolute top-1/2 left-1/2 bg-blue-100 opacity-60
   }
   
   @keyframes ripple {
@@ -586,13 +604,13 @@
   .menu-horizontal .element .sub-element {
     /*display: block;*/
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-shadow: 1px 1px 0px black;
     /*text-decoration: none;*/
     /*color: #E8EAF6;*/
     
 
-    @apply block bg-blue-700 text-blue-100 no-underline ;
+    @apply block bg-blue-700 text-blue-100 no-underline font-bold ;
     /*
     background: #303F9F;
    
@@ -688,7 +706,20 @@
     .menu-horizontal .element:hover .element-link + .sub-menu .element-link:hover {
       box-sizing: border-box;
     }
+   
   }
+
+  @media screen and (max-width: 640px) {
+    /* cuando estemos con el tamaño de pantalla mobile, el menu
+    /* horizontal debe mostrar una raya blanca */
+    .menu-horizontal .element .element-link {
+      border-bottom: 1px solid #E8EAF6;
+    }
+    .menu-horizontal .element .element-link:hover {
+      @apply bg-gradient-to-b from-blue-700 to-blue-900
+    }
+  }
+
   @media screen and (min-width: 640px) {
     .menu-horizontal .element .element-link {
       display: block;
@@ -803,6 +834,10 @@
   
   /*# sourceMappingURL=03menu-horizontal01.css.map */
   
+   /*************************************************************************/
+  /*************************************************************************/
+
+
 
 
 
