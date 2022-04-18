@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import jQuery from '../../src/componentsImports/import-jquery.js'
 import {util} from '../../src/componentsImports/util01.js';
 import {components} from '../../src/componentsImports/components01.js';
-//import {BindComponent} from './bindComponent.js'
+
 
 import { appendToContainer,recreateNode,removeContainer } from "../../src/componentsImports/utilContainer.js";
 

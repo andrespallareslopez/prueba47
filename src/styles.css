@@ -15,9 +15,11 @@ overflow-y: auto;
 }
 
 .lyt01 {
+  /*
     box-sizing: border-box;
     padding: 0;
-    margin: 0;    
+    margin: 0;
+    */    
 }
 
 .lyt01 header {
@@ -190,6 +192,170 @@ overflow-y: auto;
   .lyt01 .fix-back {
     margin: 3px;
   }
+  
+  .lyt01 .pages {
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #E8EAF6;
+  } 
+  .lyt01 .main-body {
+    display: block;
+    position: relative;
+    width: 100%;
+  }  
+  .lyt01 .wrapper {
+    display: block;
+    max-width: 960px;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  /***********************************************************/
+  .page {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .page .nav {
+    height: 3em;
+    @apply bg-blue-700
+  }
+  .page .main {
+    min-height: calc(100vh - 3em - 3em);
+
+
+  }
+  .page .footer {
+  
+    height: 3em;
+    @apply bg-blue-700
+    
+  }
+  .page .nav-mobile {
+    /*display: block;*/
+    font-family: Helvetica, Arial, sans-serif;
+    /*font-weight: bold;*/
+    text-shadow: 1px 1px 0px black;
+    /*position: relative;*/
+    background: transparent;
+    cursor: pointer;
+    /*border: 0px;*/
+    /*margin: 0px;*/
+    /*margin-top: 0px;*/
+    /*top: 0px;*/
+    /*text-align: center;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    /* pointer-events: none;*/
+    /*width: 50px;*/
+    height: 45px;
+
+    @apply block font-bold relative border-0 m-0 top-0 text-center
+
+  }
+  .page .texto-btn {
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #EDE7F6;
+  }
+  .page .fa {
+    font-weight: bold;
+    color: #E8EAF6;
+  }
+
+  /*********************************************************/
+  @media screen and (min-width: 640px) {
+    .lyt01 .page {
+      /*margin-left: 200px;*/
+      width: calc(100% - 0px);
+    }
+  }
+  .lyt01 .nav {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+   
+  .lyt01 .main {
+    position: relative;
+    display: block;
+    width: 100%;
+    /*overflow: hidden;*/
+  }
+  
+
+
+  .lyt01 main {
+    /* tiene que ser table --> si no menu vertical no escalara hasta abajo */
+    position: relative;
+    /* importante para navegadores mobiles */
+    width: 100%;
+    display: block;
+  }
+  @media screen and (min-width: 321px) {
+    .lyt01 main {
+      min-height: 250px;
+    }
+  }
+  .lyt01 .footer {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  
+  .lyt01 .main-body {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .lyt01 .childLyt, .lyt01  .childLyt1, .lyt01  .childLyt2, .lyt01  .childLyt3, .lyt01  .childLyt4, .lyt01  .childLyt5 {
+  display: block;
+  position: absolute;
+  width: 0;
+  background: #E8EAF6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%);
+  height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (min-width: 640px) {
+  .lyt01 .childLyt, .lyt01 .childLyt1, .lyt01 .childLyt2, .lyt01 .childLyt3, .lyt01 .childLyt4, .lyt01 .childLyt5 {
+    margin-left: 200px;
+    /*width:calc(100% - 200px)*/
+  }
+}
+.lyt01 .childLayout, .lyt01 .childLayout1, .lyt01 .childLayout2, .lyt01 .childLayout3, .lyt01 .childLayout4, .lyt01 .childLayout5, .lyt01 .childLayout6 {
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: #E8EAF6;
+  top: 0;
+  left: 0;
+  /*transform: translateX(100%);*/
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  /*transition: all 0.3s ease-in-out;*/
+  /*z-index:50;*/
+}
+@media screen and (min-width: 640px) {
+  .lyt01 .childLayout, .lyt01 .childLayout1,.lyt01 .childLayout2, .lyt01 .childLayout3,.lyt01 .childLayout4,.lyt01 .childLayout5,.lyt01 .childLayout6 {
+    /*margin-left: 200px;*/
+    width: calc(100% - 0px);
+  }
+}
   /*************************************************************************/
   /*************************************************************************/
   .no-animate {

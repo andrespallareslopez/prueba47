@@ -39,7 +39,7 @@ function Layout(){
        },[])
 
     return (
-        <div className="container" >
+        <div className="container " >
           <div className='lyt01'>
               <header className='sm:block bg-blue-500 p-6 '>
                   

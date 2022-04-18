@@ -7,6 +7,8 @@ import {UXAccordeon} from '../../src/componentsImports/UXAccordeon.js'
 import {UXLoadPanel} from '../../src/componentsImports/UXLoadPanel.js'
 
 
+import {MyPage01} from './MyPage01.jsx'
+
 const divstyle={
     height:'100%'
 }
@@ -27,6 +29,20 @@ function MyMenuVertical(props){
         e.preventDefault()
         var id=$(e.target).data("panel-id")
         var template;
+
+        switch(id){
+          case 'template01':
+            console.dir(props)
+             template=(props)=> (
+               <MyPage01 id={id}></MyPage01>
+             )
+          break;
+        }
+        new UXLoadPanel({
+          id:id,
+          containerView:'.container .childLayout',
+          textTemplate: template
+        });
         /*
         switch(id){
           case 'template01':
